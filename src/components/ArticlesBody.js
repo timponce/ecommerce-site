@@ -10,7 +10,7 @@ import {
   BodyImage8,
 } from "../images/index";
 
-export default function Body() {
+export default function ArticlesBody() {
   const bodyImageArray = [
     BodyImage1,
     BodyImage2,

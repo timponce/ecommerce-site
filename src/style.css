@@ -15,13 +15,24 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
 header {
   padding: 20px 40px;
+  background-color: #e7e5e4;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100vw;
+  position: sticky;
+  top: 0;
+  width: 100%;
   z-index: 2;
 }
 
@@ -32,15 +43,13 @@ header {
 }
 
 .header--nav-ul {
-  list-style: none;
   display: flex;
   justify-content: space-between;
   column-gap: 2em;
 }
 
 .hero--image {
-  width: 100vw;
-  margin-top: -100px;
+  width: 100%;
   z-index: -1;
 }
 
@@ -53,6 +62,27 @@ header {
   left: 10%;
   width: 25vw;
   z-index: 1;
+}
+
+.product-carousel {
+  display: flex;
+  margin: 60px 60px;
+  column-gap: 60px;
+}
+
+.product-card {
+  width: 300px;
+  height: 533px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  flex: 0 0 auto;
+}
+
+.product-card--placeholder-text {
+  font-family: "Fraunces", serif;
+  text-align: center;
+  margin-top: 200px;
+  transform: rotate(-30deg);
 }
 
 .body {
@@ -71,4 +101,79 @@ header {
   width: 300px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.footer {
+  padding: 0 60px 40px 60px;
+}
+
+.footer-top {
+  display: flex;
+}
+
+.footer-top--title {
+  margin-right: auto;
+  font-family: "Fraunces", serif;
+  font-size: 1.75em;
+}
+
+.footer-top--nav-groups {
+  display: flex;
+  column-gap: 60px;
+}
+
+.footer-top--nav-group--title {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+
+.footer-top--nav-group > ul > li {
+  margin-top: 6px;
+  color: #44403c;
+}
+
+.footer-top--sign-up-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-left: 80px;
+}
+
+.footer-top--register-button {
+  width: 110px;
+  height: 30px;
+  border-radius: 6px;
+  color: #fafaf9;
+  background-color: #78716c;
+}
+
+.footer-top--log-in-button {
+  width: 110px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #78716c;
+  color: #78716c;
+  background-color: #fafaf9;
+}
+
+.footer-hr {
+  margin: 20px 0;
+  border: 1px solid #78716c;
+  opacity: 50%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom--socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 24px;
+}
+
+.footer-icons {
+  font-size: 28px;
 }
