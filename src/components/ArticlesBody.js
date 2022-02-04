@@ -23,11 +23,15 @@ export default function ArticlesBody() {
   ];
 
   const BodyElement = bodyImageArray.map((image, index) => (
-    <div className="body" key={index}>
+    <div className="article-body" key={index}>
       {index % 2 === 0 && (
-        <img className="body--image" src={image} alt="long haired man" />
+        <img
+          className="article-body--image"
+          src={image}
+          alt="long haired man"
+        />
       )}
-      <p className="body--paragraph">
+      <p className="article-body--paragraph">
         Sed et elit neque. Phasellus volutpat tortor vel lacus porttitor tempus.
         Donec at mi fermentum, fringilla augue et, imperdiet ex. Aliquam erat
         volutpat. Vestibulum rutrum id metus a feugiat. Nunc viverra tempor
@@ -37,7 +41,11 @@ export default function ArticlesBody() {
         pharetra. Cras purus dolor, feugiat non semper a, egestas nec sem.{" "}
       </p>
       {index % 2 !== 0 && (
-        <img className="body--image" src={image} alt="long haired man" />
+        <img
+          className="article-body--image"
+          src={image}
+          alt="long haired man"
+        />
       )}
     </div>
   ));

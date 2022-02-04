@@ -7,7 +7,9 @@ export default function ArticlesPage() {
   return (
     <div>
       <Navbar />
-      <ArticlesBody />
+      <div id="body">
+        <ArticlesBody />
+      </div>
       <Footer />
     </div>
   );

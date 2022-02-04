@@ -7,7 +7,9 @@ export default function AboutPage() {
   return (
     <div>
       <Navbar />
-      <AboutBody />
+      <div id="body">
+        <AboutBody />
+      </div>
       <Footer />
     </div>
   );

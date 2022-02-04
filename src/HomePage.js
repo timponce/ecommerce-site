@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProductCarousel from "./components/ProductCarousel";
-import ArticlesBody from "./components/ArticlesBody";
+import Signup from "./components/Signup";
 import Footer from "./components/Footer";
 
 export default function HomePage() {
@@ -10,7 +10,10 @@ export default function HomePage() {
     <div>
       <Navbar />
       <Hero />
-      <ProductCarousel />
+      <div id="body">
+        <ProductCarousel />
+        <Signup />
+      </div>
       <Footer />
     </div>
   );

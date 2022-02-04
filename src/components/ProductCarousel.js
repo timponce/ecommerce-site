@@ -1,13 +1,18 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function ProductCarousel() {
   const productsArray = [
-    "Product 1",
-    "Product 2",
-    "Product 3",
-    "Product 4",
-    "Product 5",
-    "Product 6",
+    "Hair Tie 1",
+    "Hair Tie 2",
+    "Hair Tie 3",
+    "Hair Tie 4",
+    "Hair Tie 5",
+    "Hair Tie 6",
   ];
 
   const productCard = productsArray.map((product) => (
@@ -15,5 +20,15 @@ export default function ProductCarousel() {
       <h1 className="product-card--placeholder-text">{product}</h1>
     </div>
   ));
-  return <div className="product-carousel">{productCard}</div>;
+  return (
+    <div className="product-carousel">
+      <button className="fa-chevron-left">
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      {productCard}
+      <button className="fa-chevron-right">
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+    </div>
+  );
 }
