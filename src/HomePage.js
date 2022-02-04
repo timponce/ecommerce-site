@@ -5,13 +5,13 @@ import ProductCarousel from "./components/ProductCarousel";
 import Signup from "./components/Signup";
 import Footer from "./components/Footer";
 
-export default function HomePage() {
+export default function HomePage(props) {
   return (
     <div>
       <Navbar />
       <Hero />
       <div id="body">
-        <ProductCarousel />
+        <ProductCarousel products={props.products} />
         <Signup />
       </div>
       <Footer />

@@ -79,6 +79,7 @@ header {
   margin: 100px 60px;
   column-gap: 60px;
   align-items: center;
+  justify-content: center;
 }
 
 .fa-chevron-left {
