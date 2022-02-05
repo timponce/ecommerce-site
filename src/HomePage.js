@@ -11,7 +11,7 @@ export default function HomePage(props) {
       <Navbar />
       <Hero />
       <div id="body">
-        <ProductCarousel products={props.products} />
+        <ProductCarousel selectedProducts={props.products.hairTiesArray} />
         <Signup />
       </div>
       <Footer />

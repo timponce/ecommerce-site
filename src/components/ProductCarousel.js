@@ -8,9 +8,12 @@ import {
 export default function ProductCarousel(props) {
   const [carouselItems, setCarouselItems] = React.useState([0, 1, 2]);
 
-  const productCards = props.products.hairTiesArray.map((item) => (
+  const productCards = props.selectedProducts.map((item) => (
     <div className="product-card" key={item.id}>
       <h1 className="product-card--placeholder-text">{item.name}</h1>
+      <button className="product-card--button">
+        <span>Add to Bag</span> <span>{item.price}</span>
+      </button>
     </div>
   ));
   const displayedProductCards = carouselItems.map((item) => productCards[item]);
