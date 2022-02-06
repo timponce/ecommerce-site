@@ -11,7 +11,7 @@ export default function ProductCarousel(props) {
   const productCards = props.selectedProducts.map((item) => (
     <div className="product-card" key={item.id}>
       <h1 className="product-card--placeholder-text">{item.name}</h1>
-      <button className="product-card--button">
+      <button className="product-card--button" onClick={props.addToCart}>
         <span>Add to Bag</span> <span>{item.price}</span>
       </button>
     </div>

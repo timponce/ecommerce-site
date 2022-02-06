@@ -3,10 +3,10 @@ import Navbar from "./components/Navbar";
 import AboutBody from "./components/AboutBody";
 import Footer from "./components/Footer";
 
-export default function AboutPage() {
+export default function AboutPage(props) {
   return (
     <div>
-      <Navbar />
+      <Navbar cart={props.cart} />
       <div id="body">
         <AboutBody />
       </div>

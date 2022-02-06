@@ -59,6 +59,28 @@ header {
   column-gap: 2em;
 }
 
+.header--cart-tag-container {
+  position: absolute;
+  right: 26px;
+  top: 79.5px;
+  height: 60px;
+  width: 80px;
+  border-radius: 0 0 8px 8px;
+  background-color: #e7e5e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.header--cart-tag-number {
+  font-size: 1.25em;
+}
+
+.header--cart-icon {
+  font-size: 24px;
+}
+
 .hero--image {
   width: 100%;
   z-index: -1;

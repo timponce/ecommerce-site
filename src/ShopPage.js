@@ -6,11 +6,23 @@ import Footer from "./components/Footer";
 export default function ShopPage(props) {
   return (
     <div>
-      <Navbar />
+      <Navbar cart={props.cart} />
       <div className="product-grid-container">
-        <ProductGrid selectedProducts={props.products.hairTiesArray} />
-        <ProductGrid selectedProducts={props.products.hairProductsArray} />
-        <ProductGrid selectedProducts={props.products.hairBrushesArray} />
+        <ProductGrid
+          selectedProducts={props.products.hairTiesArray}
+          cart={props.cart}
+          addToCart={props.addToCart}
+        />
+        <ProductGrid
+          selectedProducts={props.products.hairProductsArray}
+          cart={props.cart}
+          addToCart={props.addToCart}
+        />
+        <ProductGrid
+          selectedProducts={props.products.hairBrushesArray}
+          cart={props.cart}
+          addToCart={props.addToCart}
+        />
       </div>
       <Footer />
     </div>

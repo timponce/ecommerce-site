@@ -92,13 +92,31 @@ export default function RouteSwitch() {
       },
     ],
   });
+
+  const [cart, setCart] = React.useState([]);
+
+  function addToCart(targetItem) {
+    console.log(targetItem);
+    setCart((prevState) => [...prevState, targetItem]);
+    console.log(cart);
+  }
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage products={products} />} />
-        <Route path="/ShopPage" element={<ShopPage products={products} />} />
-        <Route path="/ArticlesPage" element={<ArticlesPage />} />
-        <Route path="/AboutPage" element={<AboutPage />} />
+        <Route
+          path="/"
+          element={
+            <HomePage products={products} cart={cart} addToCart={addToCart} />
+          }
+        />
+        <Route
+          path="/ShopPage"
+          element={
+            <ShopPage products={products} cart={cart} addToCart={addToCart} />
+          }
+        />
+        <Route path="/ArticlesPage" element={<ArticlesPage cart={cart} />} />
+        <Route path="/AboutPage" element={<AboutPage cart={cart} />} />
       </Routes>
     </BrowserRouter>
   );

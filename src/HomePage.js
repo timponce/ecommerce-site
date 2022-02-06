@@ -8,10 +8,14 @@ import Footer from "./components/Footer";
 export default function HomePage(props) {
   return (
     <div>
-      <Navbar />
+      <Navbar cart={props.cart} />
       <Hero />
       <div id="body">
-        <ProductCarousel selectedProducts={props.products.hairTiesArray} />
+        <ProductCarousel
+          selectedProducts={props.products.hairTiesArray}
+          cart={props.cart}
+          addToCart={props.addToCart}
+        />
         <Signup />
       </div>
       <Footer />

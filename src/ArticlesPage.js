@@ -3,10 +3,10 @@ import Navbar from "./components/Navbar";
 import ArticlesBody from "./components/ArticlesBody";
 import Footer from "./components/Footer";
 
-export default function ArticlesPage() {
+export default function ArticlesPage(props) {
   return (
     <div>
-      <Navbar />
+      <Navbar cart={props.cart} />
       <div id="body">
         <ArticlesBody />
       </div>
