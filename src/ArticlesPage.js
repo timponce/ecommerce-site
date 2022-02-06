@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 export default function ArticlesPage(props) {
   return (
     <div>
-      <Navbar cart={props.cart} />
+      <Navbar cart={props.cart} openCart={props.openCart} />
       <div id="body">
         <ArticlesBody />
       </div>

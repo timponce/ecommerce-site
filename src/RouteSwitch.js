@@ -95,28 +95,51 @@ export default function RouteSwitch() {
 
   const [cart, setCart] = React.useState([]);
 
+  const [isCartOpen, setIsCartOpen] = React.useState(false);
+
   function addToCart(targetItem) {
     console.log(targetItem);
     setCart((prevState) => [...prevState, targetItem]);
     console.log(cart);
   }
+
+  function openCart() {
+    setIsCartOpen(!isCartOpen);
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
           element={
-            <HomePage products={products} cart={cart} addToCart={addToCart} />
+            <HomePage
+              products={products}
+              cart={cart}
+              addToCart={addToCart}
+              openCart={openCart}
+            />
           }
         />
         <Route
           path="/ShopPage"
           element={
-            <ShopPage products={products} cart={cart} addToCart={addToCart} />
+            <ShopPage
+              products={products}
+              cart={cart}
+              addToCart={addToCart}
+              openCart={openCart}
+            />
           }
         />
-        <Route path="/ArticlesPage" element={<ArticlesPage cart={cart} />} />
-        <Route path="/AboutPage" element={<AboutPage cart={cart} />} />
+        <Route
+          path="/ArticlesPage"
+          element={<ArticlesPage cart={cart} openCart={openCart} />}
+        />
+        <Route
+          path="/AboutPage"
+          element={<AboutPage cart={cart} openCart={openCart} />}
+        />
       </Routes>
     </BrowserRouter>
   );

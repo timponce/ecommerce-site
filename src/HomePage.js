@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 export default function HomePage(props) {
   return (
     <div>
-      <Navbar cart={props.cart} />
+      <Navbar cart={props.cart} openCart={props.openCart} />
       <Hero />
       <div id="body">
         <ProductCarousel
