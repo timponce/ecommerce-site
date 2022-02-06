@@ -4,7 +4,7 @@ export default function Cart(props) {
   const cartProductCard = props.cart.map((item) => (
     <div className="cart--item" key={item.id}>
       <div className="cart--item-image">
-        <h1 className="product-card--placeholder-text">{item.name}</h1>
+        <h1 className="cart--image-placeholder-text">{item.name}</h1>
       </div>
       <div className="cart--item-information">
         <h2 className="cart--item-name">{item.name}</h2>
@@ -18,13 +18,13 @@ export default function Cart(props) {
 
   return (
     <div className="cart">
-      <h1>Your cart</h1>
-      <h2>{props.cart.length}</h2>
       {cartProductCard}
       <button
         className="cart--checkout-button"
-        onClick={alert("Logic not implemented on this project")}
-      ></button>
+        onClick={() => alert("Logic not implemented on this project")}
+      >
+        Checkout
+      </button>
     </div>
   );
 }

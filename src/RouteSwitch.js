@@ -100,8 +100,8 @@ export default function RouteSwitch() {
   function addToCart(targetItem) {
     console.log(targetItem);
     setCart((prevState) => [...prevState, targetItem]);
-    console.log(cart);
   }
+  console.log(cart);
 
   function openCart() {
     setIsCartOpen(!isCartOpen);
@@ -117,6 +117,7 @@ export default function RouteSwitch() {
               products={products}
               cart={cart}
               addToCart={addToCart}
+              isCartOpen={isCartOpen}
               openCart={openCart}
             />
           }
@@ -128,17 +129,30 @@ export default function RouteSwitch() {
               products={products}
               cart={cart}
               addToCart={addToCart}
+              isCartOpen={isCartOpen}
               openCart={openCart}
             />
           }
         />
         <Route
           path="/ArticlesPage"
-          element={<ArticlesPage cart={cart} openCart={openCart} />}
+          element={
+            <ArticlesPage
+              cart={cart}
+              isCartOpen={isCartOpen}
+              openCart={openCart}
+            />
+          }
         />
         <Route
           path="/AboutPage"
-          element={<AboutPage cart={cart} openCart={openCart} />}
+          element={
+            <AboutPage
+              cart={cart}
+              isCartOpen={isCartOpen}
+              openCart={openCart}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

@@ -61,6 +61,7 @@ header {
 
 .header--cart-tag-container {
   position: absolute;
+  z-index: 2;
   right: 26px;
   top: 79.5px;
   height: 60px;
@@ -79,6 +80,49 @@ header {
 
 .header--cart-icon {
   font-size: 24px;
+}
+
+.cart {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding-top: 80px;
+  height: calc(100% - 80px);
+  width: 300px;
+  right: 0;
+  background-color: #e7e5e4;
+}
+
+.cart--item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cart--item-image {
+  height: 80px;
+  width: 80px;
+  border: 1px solid #78716c;
+  border-radius: 4px;
+  background-color: #fafaf9;
+}
+
+.cart--image-placeholder-text {
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  text-align: center;
+  max-width: 60px;
+}
+
+.cart--checkout-button {
+  width: 110px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #78716c;
+  color: #78716c;
+  background-color: #fafaf9;
+  align-self: center;
 }
 
 .hero--image {

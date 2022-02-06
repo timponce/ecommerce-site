@@ -23,7 +23,7 @@ export default function Navbar(props) {
         </ul>
       </nav>
       {props.cart.length > 0 && (
-        <button className="header--cart-tag-container">
+        <button className="header--cart-tag-container" onClick={props.openCart}>
           <span className="header--cart-tag-number">{props.cart.length}</span>
           <FontAwesomeIcon
             className="header--cart-icon"
