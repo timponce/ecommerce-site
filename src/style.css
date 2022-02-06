@@ -123,6 +123,41 @@ header {
   border: 2px solid #78716c;
 }
 
+.product-grid-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+  margin: 80px 0;
+}
+
+.product-grid--section {
+  margin: 0 auto;
+}
+
+.product-grid--heading {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  font-family: "Fraunces", serif;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 60px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
 .signup {
   margin: 60px 60px;
   display: flex;
