@@ -11,7 +11,7 @@ export default function Navbar(props) {
   return (
     <header className="header">
       <h2 className="header--title">
-        <Link to="/ecommerce-site">Grow It Out</Link>
+        <Link to="/">Grow It Out</Link>
       </h2>
       <nav className="header--nav">
         <ul className="header--nav-ul">

@@ -195,7 +195,7 @@ export default function RouteSwitch() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/ecommerce-site"
+          path="/"
           element={
             <HomePage
               products={products}
