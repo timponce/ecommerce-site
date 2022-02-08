@@ -195,7 +195,7 @@ export default function RouteSwitch() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/ecommerce-site"
           element={
             <HomePage
               products={products}
@@ -209,7 +209,7 @@ export default function RouteSwitch() {
           }
         />
         <Route
-          path="/ShopPage"
+          path="/ecommerce-site/ShopPage"
           element={
             <ShopPage
               products={products}
@@ -223,7 +223,7 @@ export default function RouteSwitch() {
           }
         />
         <Route
-          path="/ArticlesPage"
+          path="/ecommerce-site/ArticlesPage"
           element={
             <ArticlesPage
               cart={cart}
@@ -235,7 +235,7 @@ export default function RouteSwitch() {
           }
         />
         <Route
-          path="/AboutPage"
+          path="/ecommerce-site/AboutPage"
           element={
             <AboutPage
               cart={cart}
