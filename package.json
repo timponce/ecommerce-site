@@ -1,7 +1,6 @@
 {
   "name": "ecommerce-site",
   "version": "0.1.0",
-  "homepage": "https://timponce.github.io/ecommerce-site",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
