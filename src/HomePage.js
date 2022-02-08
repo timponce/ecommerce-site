@@ -10,7 +10,13 @@ export default function HomePage(props) {
   return (
     <div>
       <Navbar cart={props.cart} openCart={props.openCart} />
-      {props.isCartOpen && <Cart cart={props.cart} />}
+      {props.isCartOpen && (
+        <Cart
+          cart={props.cart}
+          decrementQuantity={props.decrementQuantity}
+          incrementQuantity={props.incrementQuantity}
+        />
+      )}
       <Hero />
       <div id="body">
         <ProductCarousel

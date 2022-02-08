@@ -8,7 +8,13 @@ export default function ArticlesPage(props) {
   return (
     <div>
       <Navbar cart={props.cart} openCart={props.openCart} />
-      {props.isCartOpen && <Cart cart={props.cart} />}
+      {props.isCartOpen && (
+        <Cart
+          cart={props.cart}
+          decrementQuantity={props.decrementQuantity}
+          incrementQuantity={props.incrementQuantity}
+        />
+      )}
       <div id="body">
         <ArticlesBody />
       </div>

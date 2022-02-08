@@ -8,7 +8,13 @@ export default function ShopPage(props) {
   return (
     <div>
       <Navbar cart={props.cart} openCart={props.openCart} />
-      {props.isCartOpen && <Cart cart={props.cart} />}
+      {props.isCartOpen && (
+        <Cart
+          cart={props.cart}
+          decrementQuantity={props.decrementQuantity}
+          incrementQuantity={props.incrementQuantity}
+        />
+      )}
       <div className="product-grid-container">
         <ProductGrid
           selectedProducts={props.products.hairTiesArray}
